@@ -1,0 +1,58 @@
+<!-- Plugin Configuration File. Read more: https://plugins.jetbrains.com/docs/intellij/plugin-configuration-file.html -->
+<idea-plugin>
+  <!-- Unique identifier of the plugin. It should be FQN. It cannot be changed between the plugin versions. -->
+  <id>kotlinopenfoundation-intellij-plugin-run-environments</id>
+
+  <!-- Public plugin name should be written in Title Case.
+   Guidelines: https://plugins.jetbrains.com/docs/marketplace/best-practices-for-listing.html#plugin-name -->
+  <name>Run Environments</name>
+
+  <vendor url="https://kotlinopenfoundation.github.io/" email="kotlin.open.foundation@gmail.com">
+    Kotlin Open Foundation
+  </vendor>
+
+  <!-- Description of the plugin displayed on the Plugin Page and IDE Plugin Manager.
+       Guidelines: https://plugins.jetbrains.com/docs/marketplace/best-practices-for-listing.html#plugin-description -->
+  <description>
+    <![CDATA[
+      Switch a run configuration's environment variables from a toolbar dropdown,
+      without editing the run configuration itself.
+      <br><br>
+      Define named environments - <code>dev</code>, <code>uat</code>, <code>prod</code>, a local override,
+      whatever you need - in a <code>run.env.json</code> file (checked in)
+      and an optional <code>run.private.env.json</code> (typically ignored by git, for secrets/local overrides),
+      using the same format as the HTTP Client's environment files.
+      Drop one at the project root, or per module for a multi-module project with different environments per service.
+      <br><br>
+      A "Run with:" selector appears in the main toolbar next to the run widget.
+      Pick an environment, hit Run - its variables are injected into the launched process.
+      Switch environments without touching any run configuration's settings.
+      <br><br>
+      Works with native Application/JUnit/TestNG/Kotlin/JAR run configurations, Maven's default execution,
+      and Gradle - both an explicit Gradle run configuration and "Build and run using: Gradle" delegation.
+      The selector only appears when the currently selected run configuration can actually receive
+      the injected variables, so it never sits there silently doing nothing for a configuration type it doesn't support.
+      <br><br>
+      Other plugins can contribute additional environment sources or injection support for other run configuration
+      types via this plugin's extension points.
+    ]]>
+  </description>
+
+  <change-notes>
+    <!--
+    Generated value.
+    Gradle task renders `CHANGELOG.md` file into this tag during build.
+    Edit CHANGELOG.md instead.
+    -->
+  </change-notes>
+
+  <idea-version since-build="262"/>
+
+  <content>
+    <module name="kotlinopenfoundation-intellij-plugin-run-environments.shared" loading="required"/>
+    <module name="kotlinopenfoundation-intellij-plugin-run-environments.frontend"/>
+    <module name="kotlinopenfoundation-intellij-plugin-run-environments.backend"/>
+    <module name="kotlinopenfoundation-intellij-plugin-run-environments.backend-gradle" loading="optional"/>
+    <module name="kotlinopenfoundation-intellij-plugin-run-environments.backend-java" loading="optional"/>
+  </content>
+</idea-plugin>

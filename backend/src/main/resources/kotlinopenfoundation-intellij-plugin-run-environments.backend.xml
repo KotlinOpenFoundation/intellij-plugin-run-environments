@@ -1,0 +1,40 @@
+<idea-plugin>
+  <dependencies>
+    <module name="intellij.platform.backend"/>
+    <module name="intellij.platform.kernel.backend"/>
+    <module name="intellij.platform.ide.impl"/>
+
+    <module name="intellij.json"/>
+
+    <module name="kotlinopenfoundation-intellij-plugin-run-environments.shared"/>
+  </dependencies>
+
+  <extensionPoints>
+    <extensionPoint
+      qualifiedName="io.github.kotlinopenfoundation.tools.intellij.plugin.runenvironments.environmentSource"
+      interface="io.github.kotlinopenfoundation.tools.intellij.plugin.runenvironments.backend.api.EnvironmentSource"
+      dynamic="true"/>
+    <extensionPoint
+      qualifiedName="io.github.kotlinopenfoundation.tools.intellij.plugin.runenvironments.environmentInjectionSupport"
+      interface="io.github.kotlinopenfoundation.tools.intellij.plugin.runenvironments.backend.api.EnvironmentInjectionSupport"
+      dynamic="true"/>
+  </extensionPoints>
+
+  <extensions defaultExtensionNs="io.github.kotlinopenfoundation.tools.intellij.plugin.runenvironments">
+    <environmentSource
+      implementation="io.github.kotlinopenfoundation.tools.intellij.plugin.runenvironments.backend.JsonEnvironmentSource"/>
+  </extensions>
+
+  <extensions defaultExtensionNs="com.intellij">
+    <platform.rpc.backend.remoteApiProvider
+      implementation="io.github.kotlinopenfoundation.tools.intellij.plugin.runenvironments.backend.EnvironmentsApiProvider"/>
+    <runDashboardCustomizer order="first"
+      implementation="io.github.kotlinopenfoundation.tools.intellij.plugin.runenvironments.backend.RunDashboardEnvironmentCustomizer"/>
+  </extensions>
+
+  <projectListeners>
+    <listener
+      class="io.github.kotlinopenfoundation.tools.intellij.plugin.runenvironments.backend.RunEnvironmentLaunchTagger"
+      topic="com.intellij.execution.ExecutionListener"/>
+  </projectListeners>
+</idea-plugin>

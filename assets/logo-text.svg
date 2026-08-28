@@ -1,0 +1,20 @@
+<svg width="125" height="40" viewBox="0 0 125 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Brace outlines: Ubuntu Regular 400 glyphs "{" / "}", coordinates baked into icon space -->
+  <!-- Gradient stops match JetBrains' own logo gradient (github.com/JetBrains/logos) -->
+  <path d="M4.00 19.11Q4.60 19.11 5.02 18.90Q5.44 18.69 5.72 18.35Q6.01 18.02 6.14 17.58Q6.28 17.15 6.28 16.70V12.24Q6.28 11.22 6.50 10.43Q6.73 9.64 7.27 9.10Q7.82 8.57 8.72 8.29Q9.63 8.00 10.97 8.00H11.07V9.81Q9.65 9.81 9.05 10.32Q8.44 10.83 8.44 12.26V16.08Q8.44 17.72 8.00 18.61Q7.57 19.50 6.78 20.00Q7.57 20.50 8.00 21.39Q8.44 22.28 8.44 23.92V27.74Q8.44 29.17 9.05 29.68Q9.65 30.19 11.07 30.19V32.00H10.97Q9.63 32.00 8.72 31.73Q7.82 31.45 7.27 30.91Q6.73 30.36 6.50 29.57Q6.28 28.78 6.28 27.76V23.30Q6.28 22.85 6.14 22.42Q6.01 21.98 5.72 21.65Q5.44 21.31 5.02 21.10Q4.60 20.89 4.00 20.89Z"
+        fill="url(#paint0_linear)"/>
+  <path d="M36.00 20.89Q35.40 20.89 34.98 21.10Q34.56 21.31 34.28 21.65Q33.99 21.98 33.86 22.42Q33.72 22.85 33.72 23.30V27.76Q33.72 28.78 33.50 29.57Q33.27 30.36 32.73 30.91Q32.18 31.45 31.28 31.73Q30.37 32.00 29.03 32.00H28.93V30.19Q30.35 30.19 30.95 29.68Q31.56 29.17 31.56 27.74V23.92Q31.56 22.28 32.00 21.39Q32.43 20.50 33.22 20.00Q32.43 19.50 32.00 18.61Q31.56 17.72 31.56 16.08V12.26Q31.56 10.83 30.95 10.32Q30.35 9.81 28.93 9.81V8.00H29.03Q30.37 8.00 31.28 8.29Q32.18 8.57 32.73 9.10Q33.27 9.64 33.50 10.43Q33.72 11.22 33.72 12.24V16.70Q33.72 17.15 33.86 17.58Q33.99 18.02 34.28 18.35Q34.56 18.69 34.98 18.90Q35.40 19.11 36.00 19.11Z"
+        fill="url(#paint0_linear)"/>
+  <path d="M13.57 14.50L13.57 25.50Q13.57 28.00 15.77 26.82L26.67 20.95Q28.43 20.00 26.67 19.05L15.77 13.19Q13.57 12.00 13.57 14.50Z"
+        fill="#1B6B34" fill-opacity="0.6" stroke="#7CF29B" stroke-width="0.8" stroke-linejoin="round"/>
+  <defs>
+    <linearGradient id="paint0_linear" x1="0" y1="32" x2="40" y2="8"
+                    gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#FF9419"/>
+      <stop offset="0.43" stop-color="#FF021D"/>
+      <stop offset="0.99" stop-color="#E600FF"/>
+    </linearGradient>
+  </defs>
+  <text x="40" y="19" font-family="Ubuntu" font-size="12" font-weight="600" fill="#1B6B34" fill-opacity="0.6" stroke="#7CF29B" stroke-width="0.5" stroke-linejoin="round">Run</text>
+  <text x="40" y="31" font-family="Ubuntu" font-size="12" font-weight="600" fill="#1B6B34" fill-opacity="0.6" stroke="#7CF29B" stroke-width="0.5" stroke-linejoin="round">Environments</text>
+</svg>

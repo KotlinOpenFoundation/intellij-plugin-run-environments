@@ -1,0 +1,20 @@
+<idea-plugin>
+  <dependencies>
+    <module name="intellij.platform.backend"/>
+
+    <plugin id="com.intellij.java"/>
+    <module name="intellij.java.execution.impl"/>
+
+    <module name="kotlinopenfoundation-intellij-plugin-run-environments.backend"/>
+  </dependencies>
+
+  <extensions defaultExtensionNs="com.intellij">
+    <runConfigurationExtension
+      implementation="io.github.kotlinopenfoundation.tools.intellij.plugin.runenvironments.backend.InjectEnvironmentVariablesExtension"/>
+  </extensions>
+
+  <extensions defaultExtensionNs="io.github.kotlinopenfoundation.tools.intellij.plugin.runenvironments">
+    <environmentInjectionSupport
+      implementation="io.github.kotlinopenfoundation.tools.intellij.plugin.runenvironments.backend.InjectEnvironmentVariablesExtension"/>
+  </extensions>
+</idea-plugin>

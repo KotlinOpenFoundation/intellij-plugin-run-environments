@@ -1,0 +1,27 @@
+[versions]
+jdk = "25"
+idea = "2026.2.1"
+kotlin = "2.4.0"
+kotlin-serialization = "1.9.0"
+rpc = "2.4.0-RC-0.1"
+junit = "4.13.2"
+mockito = "5.20.0"
+changelog = "2.5.0"
+kover = "0.9.9"
+git-version = "4.1.0"
+
+[libraries]
+kotlin-serialization-core-jvm = { module = "org.jetbrains.kotlinx:kotlinx-serialization-core-jvm", version.ref = "kotlin-serialization" }
+kotlin-serialization-json-jvm = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json-jvm", version.ref = "kotlin-serialization" }
+junit = { module = "junit:junit", version.ref = "junit" }
+mockito-core = { module = "org.mockito:mockito-core", version.ref = "mockito" }
+
+[plugins]
+kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
+kotlin-plugin-serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }
+rpc = { id = "rpc", version.ref = "rpc" }
+intellij-platform = { id = "org.jetbrains.intellij.platform" }
+intellij-platform-module = { id = "org.jetbrains.intellij.platform.module" }
+changelog = { id = "org.jetbrains.changelog", version.ref = "changelog" }
+kover = { id = "org.jetbrains.kotlinx.kover", version.ref = "kover" }
+git-version = { id = "com.palantir.git-version", version.ref = "git-version" }

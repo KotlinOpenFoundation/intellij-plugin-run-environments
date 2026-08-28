@@ -1,0 +1,18 @@
+<idea-plugin>
+  <dependencies>
+    <module name="intellij.platform.frontend"/>
+
+    <module name="kotlinopenfoundation-intellij-plugin-run-environments.shared"/>
+  </dependencies>
+
+  <actions resource-bundle="messages.RunEnvironmentsFrontendBundle">
+    <group id="RunEnvironments"
+           class="io.github.kotlinopenfoundation.tools.intellij.plugin.runenvironments.frontend.action.RunEnvironmentsActionGroup">
+      <action id="RunWithLabel"
+              class="io.github.kotlinopenfoundation.tools.intellij.plugin.runenvironments.frontend.action.RunWithLabelAction"/>
+      <action id="SelectRunEnvironment"
+              class="io.github.kotlinopenfoundation.tools.intellij.plugin.runenvironments.frontend.action.SelectRunEnvironmentAction"/>
+      <add-to-group group-id="MainToolbarRight" anchor="before" relative-to-action="NewUiRunWidget"/>
+    </group>
+  </actions>
+</idea-plugin>

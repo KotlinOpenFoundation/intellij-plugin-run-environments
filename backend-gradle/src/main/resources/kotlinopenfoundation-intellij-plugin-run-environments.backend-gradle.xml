@@ -1,0 +1,20 @@
+<idea-plugin>
+  <dependencies>
+    <module name="intellij.platform.backend"/>
+
+    <plugin id="com.intellij.gradle"/>
+    <module name="intellij.platform.externalSystem.impl"/>
+
+    <module name="kotlinopenfoundation-intellij-plugin-run-environments.backend"/>
+  </dependencies>
+
+  <extensions defaultExtensionNs="org.jetbrains.plugins.gradle">
+    <executionHelperExtension
+      implementation="io.github.kotlinopenfoundation.tools.intellij.plugin.runenvironments.backend.InjectEnvironmentVariablesGradleExtension"/>
+  </extensions>
+
+  <extensions defaultExtensionNs="io.github.kotlinopenfoundation.tools.intellij.plugin.runenvironments">
+    <environmentInjectionSupport
+      implementation="io.github.kotlinopenfoundation.tools.intellij.plugin.runenvironments.backend.InjectEnvironmentVariablesGradleExtension"/>
+  </extensions>
+</idea-plugin>
